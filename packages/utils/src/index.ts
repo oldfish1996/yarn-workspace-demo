@@ -2,4 +2,6 @@ const add = (a: number, b: number) => a + b;
 
 const sub = (a: number, b: number) => a - b;
 
-export { add, sub };
+const divide = (a: number, b: number) => a / b;
+
+export { add, divide, sub };

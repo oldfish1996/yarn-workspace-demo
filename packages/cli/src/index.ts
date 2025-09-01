@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { add, sub } from '@oldfish-yarn/utils';
+import { add, divide, sub } from '@oldfish-yarn/utils';
 import chalk from 'chalk';
 import { Command } from 'commander';
 
@@ -23,6 +23,15 @@ program
   .argument('b', '第二个数字')
   .action((a: string, b: string) => {
     console.log(chalk.cyan(`${a} - ${b} = ${sub(+a, +b)}`));
+  });
+
+program
+  .command('sub')
+  .description('除法')
+  .argument('a', '第一个数字')
+  .argument('b', '第二个数字')
+  .action((a: string, b: string) => {
+    console.log(chalk.cyan(`${a} - ${b} = ${divide(+a, +b)}`));
   });
 
 program.parse();
