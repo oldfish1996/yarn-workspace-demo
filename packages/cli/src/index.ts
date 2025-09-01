@@ -26,7 +26,7 @@ program
   });
 
 program
-  .command('sub')
+  .command('divide')
   .description('除法')
   .argument('a', '第一个数字')
   .argument('b', '第二个数字')
